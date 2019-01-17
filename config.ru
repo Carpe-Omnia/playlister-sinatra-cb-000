@@ -5,10 +5,18 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 #clear out all the old stuff and populate with new stuff
-Artist.all.destroy
-Genre.all.destroy
-Song.all.destroy
-SongGenre.all.destroy
+Artist.all.each do |thing|
+  thing.destroy
+end
+Genre.all.each do |thing|
+  thing.destroy
+end
+Song.all.each do |thing|
+  thing.destroy
+end
+SongGenre.all.each do |thing|
+  thing.destroy
+end
 jeff = LibraryParser.new
 jeff.call
 

@@ -18,8 +18,10 @@ SongGenre.all.each do |thing|
   thing.destroy
 end
 
+#load stuff up
 jeff = LibraryParser.new
 jeff.call
+
 
 #load all controllers
 use Rack::MethodOverride

@@ -17,6 +17,7 @@ end
 SongGenre.all.each do |thing|
   thing.destroy
 end
+
 jeff = LibraryParser.new
 jeff.call
 
